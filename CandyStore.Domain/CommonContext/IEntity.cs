@@ -1,4 +1,4 @@
-﻿namespace CandyStore.Infrastructure.DataAccess;
+﻿namespace CandyStore.Domain.CommonContext;
 
 public interface IEntity
 {

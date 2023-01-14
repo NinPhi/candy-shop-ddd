@@ -1,4 +1,4 @@
-﻿using CandyStore.Infrastructure.DataAccess;
+﻿using CandyStore.Domain.CommonContext;
 using CSharpFunctionalExtensions;
 
 namespace CandyStore.Domain.CandyContext;
@@ -12,10 +12,11 @@ public class Candy : IEntity
 
     private Candy() { }
 
-    public static Result<Candy, string> New(long id,
-                                            string brandName,
-                                            string productName,
-                                            decimal costPerKg)
+    public static Result<Candy, string> New(
+        long id,
+        string brandName,
+        string productName,
+        decimal costPerKg)
     {
         var candy = new Candy()
         {
@@ -32,9 +33,10 @@ public class Candy : IEntity
         return candy;
     }
 
-    public Result Edit(string brandName,
-                       string productName,
-                       decimal costPerKg)
+    public Result Edit(
+        string brandName,
+        string productName,
+        decimal costPerKg)
     {
         BrandName = brandName;
         ProductName = productName;
@@ -49,6 +51,9 @@ public class Candy : IEntity
 
     private static Result Validate(Candy candy)
     {
+        if (candy.Id < 0)
+            return Result.Failure("Candy id number cannot be negative");
+
         if (string.IsNullOrWhiteSpace(candy.BrandName))
             return Result.Failure("Candy brand name cannot be empty");
 

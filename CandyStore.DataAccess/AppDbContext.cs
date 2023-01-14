@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CandyStore.DataAccess;
 
-public class AppDbContext : DbContext
+internal class AppDbContext : DbContext
 {
-    public DbSet<Candy> Candies { get; private set; }
+    internal DbSet<Candy> Candies { get; private set; }
 
-    public AppDbContext(DbContextOptions<AppDbContext> opts) : base(opts) { }
+    internal AppDbContext(DbContextOptions<AppDbContext> opts) : base(opts) { }
 
-	protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder builder)
 	{
 
 	}

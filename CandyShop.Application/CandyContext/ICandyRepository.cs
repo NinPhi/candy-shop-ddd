@@ -1,6 +1,6 @@
 ﻿using CandyStore.Domain.CandyContext;
 
-namespace CandyStore.Infrastructure.DataAccess;
+namespace CandyStore.Application.CandyContext;
 
 public interface ICandyRepository
 {

@@ -1,5 +1,5 @@
-﻿using CandyStore.Domain.CandyContext;
-using CandyStore.Infrastructure.DataAccess;
+﻿using CandyStore.Application.CandyContext;
+using CandyStore.Domain.CandyContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace CandyStore.DataAccess.Repositories;
@@ -8,7 +8,7 @@ public class CandyRepository : ICandyRepository
 {
     private readonly AppDbContext context;
 
-    public CandyRepository(AppDbContext context)
+    internal CandyRepository(AppDbContext context)
     {
         this.context = context;
     }

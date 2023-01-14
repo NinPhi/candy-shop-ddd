@@ -13,6 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyShop.Application", "Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.DataAccess", "CandyStore.DataAccess\CandyStore.DataAccess.csproj", "{09803940-5A17-48E8-BFE9-FAD3DF207194}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore.CommandHandlers", "CandyStore.CommandHandlers\CandyStore.CommandHandlers.csproj", "{0178D8C4-4EEF-4046-A781-967B6F40B6FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore.Cqrs", "CandyStore.Cqrs\CandyStore.Cqrs.csproj", "{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.QueryHandlers", "CandyStore.QueryHandlers\CandyStore.QueryHandlers.csproj", "{EC29003E-F405-4D69-A8B9-2B322D7A48AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,18 @@ Global
 		{09803940-5A17-48E8-BFE9-FAD3DF207194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09803940-5A17-48E8-BFE9-FAD3DF207194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09803940-5A17-48E8-BFE9-FAD3DF207194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0178D8C4-4EEF-4046-A781-967B6F40B6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0178D8C4-4EEF-4046-A781-967B6F40B6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0178D8C4-4EEF-4046-A781-967B6F40B6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0178D8C4-4EEF-4046-A781-967B6F40B6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
