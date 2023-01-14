@@ -1,21 +1,51 @@
 ﻿using CandyStore.Application.CandyContext;
 using CandyStore.DataAccess.Repositories;
+using CandyStore.Cqrs.Requests;
+using CandyCommandHandler = CandyStore.CommandHandlers.CandyContext.CandyHandler;
+using CandyQueryHandler = CandyStore.QueryHandlers.CandyContext.CandyHandler;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using CandyStore.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace CandyStore.Infrastructure.DependencyInjection;
 
 public static class Configuration
 {
     public static void RegisterAll(
-        this IServiceCollection services)
+        this IServiceCollection services,
+        IConfiguration configuration)
     {
-        services.RegisterRepositories();
+        services
+            .RegisterDbContext(configuration)
+            .RegisterRepositories()
+            .RegisterMediatR();
     }
 
     private static IServiceCollection RegisterRepositories(
         this IServiceCollection services)
     {
         services.AddTransient<ICandyRepository, CandyRepository>();
+        return services;
+    }
+
+    private static IServiceCollection RegisterDbContext(
+        this IServiceCollection services,
+        IConfiguration configuration)
+    {
+        var connectionString = configuration.GetConnectionString("CandyConnection");
+        services.AddDbContext<AppDbContext>(opts => opts.UseSqlServer(connectionString));
+        return services;
+    }
+
+    private static IServiceCollection RegisterMediatR(
+        this IServiceCollection services)
+    {
+        services.AddMediatR(
+            typeof(CandyCommandHandler),
+            typeof(CandyQueryHandler));
+
         return services;
     }
 }

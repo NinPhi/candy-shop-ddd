@@ -10,21 +10,28 @@ public class CandyHandler :
     IRequestHandler<UpdateCandyCommand, Result<CandyDto, string>>,
     IRequestHandler<RemoveCandyCommand, Result>
 {
+    private readonly CandyService candyService;
+
+    public CandyHandler(CandyService candyService)
+    {
+        this.candyService = candyService;
+    }
+
     public Task<Result<CandyDto, string>> Handle(
         CreateCandyCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return candyService.Create(request.Dto);
     }
 
     public Task<Result<CandyDto, string>> Handle(
         UpdateCandyCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return candyService.Update(request.Dto);
     }
 
     public Task<Result> Handle(
         RemoveCandyCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return candyService.Delete(request.Id);
     }
 }

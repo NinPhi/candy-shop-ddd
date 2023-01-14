@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CandyShop.Application\CandyShop.Application.csproj" />
+    <ProjectReference Include="..\CandyStore.CommandHandlers\CandyStore.CommandHandlers.csproj" />
+    <ProjectReference Include="..\CandyStore.Cqrs\CandyStore.Cqrs.csproj" />
     <ProjectReference Include="..\CandyStore.DataAccess\CandyStore.DataAccess.csproj" />
+    <ProjectReference Include="..\CandyStore.QueryHandlers\CandyStore.QueryHandlers.csproj" />
   </ItemGroup>
 
 </Project>

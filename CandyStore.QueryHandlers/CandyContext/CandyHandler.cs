@@ -9,15 +9,22 @@ public class CandyHandler :
     IRequestHandler<GetCandyQuery, Result<CandyDto, string>>,
     IRequestHandler<GetCandiesQuery, Result<List<CandyDto>, string>>
 {
+    private readonly CandyService candyService;
+
+    public CandyHandler(CandyService candyService)
+    {
+        this.candyService = candyService;
+    }
+
     public Task<Result<CandyDto, string>> Handle(
         GetCandyQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return candyService.Find(request.Id);
     }
 
     public Task<Result<List<CandyDto>, string>> Handle(
         GetCandiesQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return candyService.All();
     }
 }

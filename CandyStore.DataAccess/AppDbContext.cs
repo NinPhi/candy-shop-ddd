@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CandyStore.DataAccess;
 
-internal class AppDbContext : DbContext
+public class AppDbContext : DbContext
 {
     internal DbSet<Candy> Candies { get; private set; }
 

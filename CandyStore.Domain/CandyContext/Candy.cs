@@ -1,26 +1,30 @@
 ﻿using CandyStore.Domain.CommonContext;
 using CSharpFunctionalExtensions;
+using System.ComponentModel.DataAnnotations;
 
 namespace CandyStore.Domain.CandyContext;
 
 public class Candy : IEntity
 {
     public long Id { get; init; }
+
+    [MaxLength(50)]
     public string BrandName { get; private set; } = null!;
+
+    [MaxLength(50)]
     public string ProductName { get; private set; } = null!;
+
     public decimal CostPerKg { get; private set; }
 
     private Candy() { }
 
     public static Result<Candy, string> New(
-        long id,
         string brandName,
         string productName,
         decimal costPerKg)
     {
         var candy = new Candy()
         {
-            Id = id,
             BrandName = brandName,
             ProductName = productName,
             CostPerKg = costPerKg,
