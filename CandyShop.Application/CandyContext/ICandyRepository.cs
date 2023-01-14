@@ -4,9 +4,9 @@ namespace CandyStore.Infrastructure.DataAccess;
 
 public interface ICandyRepository
 {
-    Task<List<Candy>> GetAsync();
-    Task<Candy> GetAsync(long id);
-    Task AddAsync(Candy candy);
-    Task EditAsync(Candy candy);
-    Task DeleteAsync(long id);
+    public Task<List<Candy>> AllAsync();
+    public Task<Candy?> SingleOrNullAsync(long id);
+    public Task<Candy> AddAsync(Candy candy);
+    public Task EditAsync(Candy candy);
+    public Task RemoveAsync(Candy candy);
 }
