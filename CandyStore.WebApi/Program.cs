@@ -21,7 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "CandyShop API is up and running!")
+app.MapGet("/", () => "CandyStore API is up and running!")
     .WithName("CheckStatus");
 
 #region CandyContext
