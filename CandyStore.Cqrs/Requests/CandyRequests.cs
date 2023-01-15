@@ -1,4 +1,4 @@
-﻿using CandyShop.Application.CandyContext;
+﻿using CandyStore.Application.CandyContext;
 using CSharpFunctionalExtensions;
 using MediatR;
 

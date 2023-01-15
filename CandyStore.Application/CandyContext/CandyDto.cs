@@ -1,6 +1,6 @@
 ﻿using CandyStore.Domain.CandyContext;
 
-namespace CandyShop.Application.CandyContext;
+namespace CandyStore.Application.CandyContext;
 
 public record CandyDto(
     long Id,

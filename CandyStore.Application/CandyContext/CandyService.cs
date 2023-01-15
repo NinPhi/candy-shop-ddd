@@ -2,7 +2,7 @@
 using CandyStore.Domain.CandyContext;
 using CSharpFunctionalExtensions;
 
-namespace CandyShop.Application.CandyContext;
+namespace CandyStore.Application.CandyContext;
 
 public class CandyService
 {

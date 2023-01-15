@@ -9,15 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.Domain", "CandyS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.Infrastructure", "CandyStore.Infrastructure\CandyStore.Infrastructure.csproj", "{6A8BCFB9-A463-46EF-B2EE-456FDFF75A9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyShop.Application", "CandyShop.Application\CandyShop.Application.csproj", "{87B522FE-B2EF-4FAC-9A06-31DC526C668A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.DataAccess", "CandyStore.DataAccess\CandyStore.DataAccess.csproj", "{09803940-5A17-48E8-BFE9-FAD3DF207194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore.CommandHandlers", "CandyStore.CommandHandlers\CandyStore.CommandHandlers.csproj", "{0178D8C4-4EEF-4046-A781-967B6F40B6FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.CommandHandlers", "CandyStore.CommandHandlers\CandyStore.CommandHandlers.csproj", "{0178D8C4-4EEF-4046-A781-967B6F40B6FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore.Cqrs", "CandyStore.Cqrs\CandyStore.Cqrs.csproj", "{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.Cqrs", "CandyStore.Cqrs\CandyStore.Cqrs.csproj", "{D6088ACA-6702-4A74-A9D8-E1FF076EC1C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.QueryHandlers", "CandyStore.QueryHandlers\CandyStore.QueryHandlers.csproj", "{EC29003E-F405-4D69-A8B9-2B322D7A48AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandyStore.Application", "CandyStore.Application\CandyStore.Application.csproj", "{9D3E2B2E-55EF-4014-B20D-3ADB85EB7A30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{6A8BCFB9-A463-46EF-B2EE-456FDFF75A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A8BCFB9-A463-46EF-B2EE-456FDFF75A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A8BCFB9-A463-46EF-B2EE-456FDFF75A9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87B522FE-B2EF-4FAC-9A06-31DC526C668A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87B522FE-B2EF-4FAC-9A06-31DC526C668A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87B522FE-B2EF-4FAC-9A06-31DC526C668A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87B522FE-B2EF-4FAC-9A06-31DC526C668A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09803940-5A17-48E8-BFE9-FAD3DF207194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09803940-5A17-48E8-BFE9-FAD3DF207194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09803940-5A17-48E8-BFE9-FAD3DF207194}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC29003E-F405-4D69-A8B9-2B322D7A48AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D3E2B2E-55EF-4014-B20D-3ADB85EB7A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3E2B2E-55EF-4014-B20D-3ADB85EB7A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3E2B2E-55EF-4014-B20D-3ADB85EB7A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3E2B2E-55EF-4014-B20D-3ADB85EB7A30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿using CandyStore.Domain.CommonContext;
 
-namespace CandyShop.Application;
+namespace CandyStore.Application;
 
 public interface IRepository<TEntity>
     where TEntity : class, IEntity
