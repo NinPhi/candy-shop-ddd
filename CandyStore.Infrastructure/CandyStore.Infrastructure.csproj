@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CandyShop.Application\CandyShop.Application.csproj" />
+    <ProjectReference Include="..\CandyStore.Application\CandyStore.Application.csproj" />
     <ProjectReference Include="..\CandyStore.CommandHandlers\CandyStore.CommandHandlers.csproj" />
     <ProjectReference Include="..\CandyStore.Cqrs\CandyStore.Cqrs.csproj" />
     <ProjectReference Include="..\CandyStore.DataAccess\CandyStore.DataAccess.csproj" />

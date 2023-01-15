@@ -31,9 +31,9 @@ public class UpdateCandyCommand :
     public UpdateCandyCommand(CandyDto dto) => Dto = dto;
 }
 
-public class RemoveCandyCommand :
+public class DeleteCandyCommand :
     IRequest<Result>
 {
     public long Id { get; }
-    public RemoveCandyCommand(long id) => Id = id;
+    public DeleteCandyCommand(long id) => Id = id;
 }
