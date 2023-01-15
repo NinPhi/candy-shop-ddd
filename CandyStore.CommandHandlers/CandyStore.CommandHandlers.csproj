@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CandyStore.Application\CandyStore.Application.csproj" />
+    <ProjectReference Include="..\CandyStore.Cqrs\CandyStore.Cqrs.csproj" />
+  </ItemGroup>
+
+</Project>
