@@ -8,7 +8,7 @@ namespace CandyStore.CommandHandlers.CandyContext;
 public class CandyHandler :
     IRequestHandler<CreateCandyCommand, Result<CandyDto, string>>,
     IRequestHandler<UpdateCandyCommand, Result<CandyDto, string>>,
-    IRequestHandler<RemoveCandyCommand, Result>
+    IRequestHandler<DeleteCandyCommand, Result>
 {
     private readonly CandyService candyService;
 
@@ -30,7 +30,7 @@ public class CandyHandler :
     }
 
     public Task<Result> Handle(
-        RemoveCandyCommand request, CancellationToken cancellationToken)
+        DeleteCandyCommand request, CancellationToken cancellationToken)
     {
         return candyService.Delete(request.Id);
     }
