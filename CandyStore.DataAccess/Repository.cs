@@ -1,4 +1,4 @@
-﻿using CandyShop.Application;
+﻿using CandyStore.Application;
 using CandyStore.Domain.CommonContext;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 

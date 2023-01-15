@@ -1,13 +1,14 @@
 ﻿using CandyStore.Application.CandyContext;
 using CandyStore.DataAccess.Repositories;
 using CandyStore.Cqrs.Requests;
+using CandyStore.DataAccess;
 using CandyCommandHandler = CandyStore.CommandHandlers.CandyContext.CandyHandler;
 using CandyQueryHandler = CandyStore.QueryHandlers.CandyContext.CandyHandler;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-using CandyStore.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace CandyStore.Infrastructure.DependencyInjection;
 
@@ -20,14 +21,8 @@ public static class Configuration
         services
             .RegisterDbContext(configuration)
             .RegisterRepositories()
+            .RegisterAppServices()
             .RegisterMediatR();
-    }
-
-    private static IServiceCollection RegisterRepositories(
-        this IServiceCollection services)
-    {
-        services.AddTransient<ICandyRepository, CandyRepository>();
-        return services;
     }
 
     private static IServiceCollection RegisterDbContext(
@@ -39,12 +34,27 @@ public static class Configuration
         return services;
     }
 
+    private static IServiceCollection RegisterRepositories(
+        this IServiceCollection services)
+    {
+        services.AddTransient<ICandyRepository, CandyRepository>();
+        return services;
+    }
+
+    private static IServiceCollection RegisterAppServices(
+        this IServiceCollection services)
+    {
+        services.AddTransient<CandyService>();
+        return services;
+    }
+
     private static IServiceCollection RegisterMediatR(
         this IServiceCollection services)
     {
         services.AddMediatR(
-            typeof(CandyCommandHandler),
-            typeof(CandyQueryHandler));
+            typeof(CandyCommandHandler).GetTypeInfo().Assembly,
+            typeof(CandyQueryHandler).GetTypeInfo().Assembly,
+            typeof(GetCandyQuery).GetTypeInfo().Assembly);
 
         return services;
     }

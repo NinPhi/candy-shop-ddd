@@ -5,9 +5,9 @@ namespace CandyStore.DataAccess;
 
 public class AppDbContext : DbContext
 {
-    internal DbSet<Candy> Candies { get; private set; }
+    internal DbSet<Candy> Candies { get; set; }
 
-    internal AppDbContext(DbContextOptions<AppDbContext> opts) : base(opts) { }
+    public AppDbContext(DbContextOptions<AppDbContext> opts) : base(opts) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
 	{
